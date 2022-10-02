@@ -1,0 +1,200 @@
+/* ===== General ===== */
+:root {
+    --clr-green-darker: hsl(179, 62%, 43%);
+    --clr-green-dark: hsl(179, 47%, 52%);
+    --clr-green-light: hsl(71, 73%, 54%);
+    
+    --clr-neutral-min: hsl(218, 22%, 67%);
+    --clr-neutral-medium: hsl(204, 43%, 93%);
+    --clr-neutral-max: white;
+
+    --shadow-weak: 0 0.9375rem 1.875rem hsla(204, 43%, 50%, 25%);
+    --shadow-strong: 0 0.625rem 1.25rem hsla(0, 0%, 0%, 18%);
+
+    font-family: 'Karla', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+
+    background: var(--clr-neutral-medium);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Card ===== */
+.card {
+    margin: 2rem;
+    border-radius: 0.3125rem;
+    overflow: hidden;
+    max-width: 39.6875rem;
+
+    box-shadow: var(--shadow-weak);
+}
+
+.card > * {
+    padding: 1.5rem;
+    color: var(--clr-neutral-max);
+}
+
+/* Join our community */
+.card__join {
+    background: var(--clr-neutral-max);
+}
+
+.card__join-title {
+    color: var(--clr-green-dark);
+
+    font-size: 1.25rem;
+
+    margin-bottom: 1.5625rem;
+}
+
+.card__join-subtitle {
+    color: var(--clr-green-light);
+
+    font-size: 0.9375rem;
+
+    margin-bottom: 1.125rem;
+}
+
+.card__join-paragraph {
+    color: var(--clr-neutral-min);
+
+    font-size: 0.875rem;
+    line-height: 1.85;
+    letter-spacing: -0.0063rem;
+}
+
+/* Monthly Subscribers & Why Us*/
+.card__mon-sub {
+    background: var(--clr-green-darker);
+}
+
+.card__sec-subtitle {
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    margin-bottom: 1.25rem;
+}
+
+.card__price {
+    font-weight: 200;
+
+    margin-bottom: 0.4375rem;
+}
+
+.card__price span {
+    font-weight: 600;
+    font-size: 2rem;
+    vertical-align: sub;
+
+    margin-right: 0.5rem;
+}
+
+.card__price-info {
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.card__btn {
+    background: var(--clr-green-light);
+    color: var(--clr-neutral-max);
+    border: 0;
+    
+    width: 100%;
+    padding: 0.875rem;
+    border-radius: 0.3125rem;
+
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+
+    box-shadow: var(--shadow-strong);
+
+    margin: auto;
+    display: block;
+    
+    cursor: pointer;
+    transition: background .5s, color .5s;
+}
+
+.card__btn:hover {
+    color: var(--clr-green-light);
+    background: var(--clr-neutral-max);
+}
+
+.card__why-us {
+    background: var(--clr-green-dark);
+}
+
+.card__list {
+    list-style: none;
+    padding: 0;
+
+    font-weight: 200;
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.0125rem;
+}
+
+
+/* ===== DESKTOP Media Queries ===== */
+@media (min-width: 600px) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card > * {
+        padding: 2.5rem;
+    }
+
+    .card__join {  
+        grid-column: span 2;
+    }
+
+    .card__join-title {
+        font-size: 1.5rem;
+    }
+    
+    .card__join-subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 0.625rem;
+    }
+    
+    .card__join-paragraph {
+        font-size: 1rem;
+        line-height: 1.65;
+        letter-spacing: -0.0063rem;
+    }
+}
+
+
+/* ===== Footer ===== */
+footer {
+    font-size: .7rem;
+    text-align: center;
+
+    width: 18em;
+    margin: 1em auto 3em;
+}
+
+footer a {
+    color: var(--clr-green-darker);
+    transition: color .3s;
+}
+
+footer a:hover {
+    color: var(--clr-green-light);
+}
